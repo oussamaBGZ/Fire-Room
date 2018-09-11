@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css?family=Courgette");
+@import url("https://fonts.googleapis.com/css?family=Gilda+Display");
+
+*{
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  font-family: 'Courgette', cursive !important;
+}
+
+  .home{
+    background: #EEEEEE;
+    display: flex;
+    height: 100vh;
+  }
+
+  .home h1{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    color: #37357F;
+  }
+
+  .home div{
+    background: #fff;
+    box-shadow: 0px 0px 10px #000;
+    margin: auto;
+    padding: 70px 100px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .home div img{
+    margin-bottom: 50px;
+  }
+
+  .loginBtn{
+    background: #DD4B39;
+    border: none;
+    padding: 8px 10px;
+    position: relative;
+    text-align: right;
+    color: #fff;
+    font-family: inherit;
+    transition: all 0.25s;
+    cursor: pointer;
+  }
+  
+  .loginBtn::before{
+    content: "+G";
+    position: absolute;
+    left: 3px;
+    top: 5px;
+    font-size: 18px;
+  }
+  .loginBtn:hover{
+    box-shadow: 0px 0px 10px #DD4B39;
+  }
+
+
+.App {
+  display: flex;
+  height: 100vh; }
+  .App .Users {
+    position: relative;
+    flex: 1;
+    background: #37357F; 
+  padding: 0px 0px 0px 20px;
+color: #58afd1;}
+  .App .Chatting {
+    flex: 4; }
+
+.Chatting .display_chat {
+  height: 90vh;
+  overflow-y: scroll; 
+  padding: 0px 20px;
+}
+
+.Chatting form {
+  height: 10vh; }
+  .Chatting form input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 30px;
+    box-sizing: border-box;
+    color: gray;
+    font-family: inherit; }
+
+.Users button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+  font-family: inherit;
+}
+.draw-border {
+  box-shadow: inset 0 0 0 4px #58afd1;
+  color: #58afd1;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.draw-border:hover {
+  color: #ffe593;
+}
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: #ffe593;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem 'Roboto Slab', sans-serif;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+}
+.btn:focus {
+  outline: 2px dotted #55d7dc;
+}
+.chat_layout{
+  display: flex;
+  padding: 15px 0px;
+  align-items: center;
+}
+.chat_layout i{
+  font-weight: bolder;
+  font-size: 16px;
+}
+.chat_layout p{
+  font-size: 16px;
+}
+.chat_layout img {
+  max-width: 60px;
+  border-radius: 50%;
+}
+.container{
+  height: 80vh;
+  overflow-y: scroll; 
+}
+
+.static {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  top: -100px;
+  opacity: 0.05;
+  z-index: 230;
+  user-select: none;
+  user-drag: none;
+}
+
+.error {
+  text-align: center;
+  font-family: 'Gilda Display', serif;
+  font-size: 95px;
+  font-style: italic;
+  text-align: center;
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -60px;
+  right: 0;
+  animation: noise 2s linear infinite;
+  overflow: default;
+}
+
+.error:after {
+  content: '404';
+  font-family: 'Gilda Display', serif;
+  font-size: 100px;
+  font-style: italic;
+  text-align: center;
+  width: 150px;
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  color: blue;
+  animation: noise-1 .2s linear infinite;
+}
+
+.info {
+  text-align: center;
+  font-family: 'Gilda Display', serif;
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 140px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: noise-3 1s linear infinite;
+}
+
+.error:before {
+  content: '404';
+  font-family: 'Gilda Display', serif;
+  font-size: 100px;
+  font-style: italic;
+  text-align: center;
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  color: red;
+  animation: noise-2 .2s linear infinite;
+}
+
+@keyframes noise-1 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: -6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: 2px;}
+}
+
+@keyframes noise-2 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: 6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: -2px;}
+}
+
+@keyframes noise {
+  0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; transform: scaleY(1);}  
+  4.3% {opacity: 1; transform: scaleY(1.7);}
+  43% {opacity: 1; transform: scaleX(1.5);}
+}
+
+@keyframes noise-3 {
+  0%,3%,5%,42%,44%,100% {opacity: 1; transform: scaleY(1);}
+  4.3% {opacity: 1; transform: scaleY(4);}
+  43% {opacity: 1; transform: scaleX(10) rotate(60deg);}
+}
